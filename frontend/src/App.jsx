@@ -2,7 +2,9 @@ import Earth3D from "./Earth3D";
 import { useEffect, useState, useRef } from "react";
 import "./App.css";
 
-const API_URL = "http://localhost:5001/api";
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "http://localhost:5001/api";
 
 const ecoTypes = [
   { name: "Plant a tree", icon: "🌳", points: 50 },
